@@ -1,0 +1,48 @@
+<script type="text/javascript" src="_layouts/15/clienttemplates.js"></script>  
+<script type="text/javascript" src="_layouts/15/clientforms.js"></script>  
+<script type="text/javascript" src="_layouts/15/clientpeoplepicker.js"></script>  
+<script type="text/javascript" src="_layouts/15/autofill.js"></script>
+
+<script type="text/javascript" src="/Style Library/GNet_Configuration/slider/AddUserToSPgroup.js"></script>
+
+
+<style type="text/css">
+.username{color:#333;font-family:Arial Regular;font-weight:bold;font-size:14px;}
+.pplpickervalidation{color:red; font-weight:normal;padding-left:0px;}
+.securityprograms{color: #333;font-family: Arial Regular;font-weight: bold;font-size: 14px;}
+.ddlselect{color:#666666;}
+.ddlcustomevalidation{color:red; font-family:Arial Regular; font-weight:normal;padding-left:0px;}
+.usernotexistspgrp{color:red!important; font-weight:bold;display:block!import;}
+.onsuccess{color:green;padding-top:8px;text-align: center; font-weight:bold;padding-left:4px;}
+.onerror{color:red; font-weight:bold;padding-left:4px;}
+.pplpickercustomevalidation{color:red; font-family:Arial Regular; font-weight:normal;padding-left:0px;}
+.requried{color:red;font-size:10px;font-family:Arial Regular;font-weight: bold;}
+</style>
+<div id="hide">
+   <div>
+      <p class="username">User Email id / User Name&nbsp<span style="color:red;">*<span></p>
+      <div id="peoplePickerDiv">
+      </div>
+   </div>
+   <span ID="PeoplePickervalidation" class="pplpickervalidation"></span>
+   <div>
+      <br/><p class="securityprograms" >Select the Security Programs&nbsp<span style="color:red;">*</span></p>
+      <select id = "myList" class="ddlselect" onchange = "getGroupName();" >
+         <option value="void">--Please Select--</option>
+         <option value="FACAOSSP">FACAOSSP</option>
+         <option value="AOSSP">AOSSP</option>
+         <option value="TSAPCSSP">TSAPCSSP</option>
+         <option value="test1">test1</option>
+      </select>
+   </div>
+   <span ID="selectddl" class= "ddlcustomevalidation"></span>
+   <br/>
+   <div><input type="button" style="margin-left:0px" class="submit" value="Grant Access" onclick="AddUserIntoSecurityGroup('peoplePickerDiv');"></input>
+   </div>
+</div>
+   
+<div><span ID="usernotexist" class="usernotexistspgrp"></span></div>
+<label ID="success" class="onsuccess"></label> 
+<div><span ID="error" class="onerror"></span></div>
+<div><span ID="PeoplePickervalidation" class="pplpickercustomevalidation"></span></div>
+ 
